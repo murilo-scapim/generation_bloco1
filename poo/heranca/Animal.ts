@@ -1,4 +1,4 @@
-export class Animal {
+export abstract class Animal {
 
   protected _nome: string;
   private _idade: number;
@@ -23,8 +23,6 @@ export class Animal {
   public set idade(idade: number) {
     this._idade = idade;
   }
-
-  public emitirSom(): void {
-    console.log(`${this._nome} está emitindo um som genérico`);
-  }
+  
+  public abstract emitirSom(): void;
 }
